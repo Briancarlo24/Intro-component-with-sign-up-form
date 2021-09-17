@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+//===========================COLORS==============================
+
+/*Primary*/
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+/*Accent*/
+$blue: hsl(248, 32%, 49%);
+$lightWhite: rgba(255, 255, 255, 0.7);
+
+/*Neutral*/
+$darkBlue: hsl(249, 10%, 26%);
+$grayishBlue: hsl(246, 25%, 77%);
+
+.attribution {
+  font-size: 11px;
+  color: white;
+  text-align: center;
+
+  a {
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+body {
+  background: url("../images/bg-intro-mobile.png") $red no-repeat top center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  main {
+    width: 85%;
+    min-width: 250px;
+    margin: 6rem 0;
+  }
+}
+
+/*====================HEADER====================*/
+.header {
+  margin-bottom: 4rem;
+
+  .header-title {
+    color: white;
+    font-size: 1.7rem;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+  }
+  .header-desc {
+    color: $lightWhite;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+}
+
+/*====================FORM====================*/
+
+.pricing {
+  .pricing-promo {
+    background-color: $blue;
+    border-radius: 0.5rem;
+    box-shadow: 0px 8.5px 1px 0px rgba(0, 0, 0, 0.18);
+    color: $lightWhite;
+    font-size: 0.9rem;
+    padding: 1.2rem 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+
+    .pricing-highlight {
+      font-weight: 700;
+      color: white;
+    }
+  }
+
+  .form {
+    background-color: white;
+    border-radius: 0.5rem;
+
+    padding: 1.5rem;
+
+    .agreement {
+      color: $grayishBlue;
+      font-size: 0.65rem;
+      font-weight: 500;
+      line-height: 1.8;
+      padding: 0 1rem;
+
+      .terms {
+        color: $red;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.icon-container {
+  position: relative;
+
+  .icon {
+    position: absolute;
+    right: 1.5rem;
+    transform: translateY(1rem);
+  }
+}
+
+.error-message {
+  display: block;
+  color: $red;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 500;
+
+  position: absolute;
+  right: 0px;
+  bottom: 20px;
+}
+.inputs,
+.button {
+  height: 3.5rem;
+  width: 100%;
+
+  border-radius: 5px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+  padding: 0 1rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.inputs {
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  color: rgba(0, 0, 0, 0.75);
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
+.button {
+  background-color: $green;
+  border-color: transparent;
+  border-style: solid solid inset 1px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.242);
+
+  // box-shadow: 0 5px 5px -2px #9a9a9a;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1px;
+  outline: none;
+  padding-top: 4px;
+  text-transform: uppercase;
+
+  &:active {
+    box-shadow: 0 5px 5px -3px #9a9a9a;
+    background-color: hsl(154, 56%, 49%);
+    color: rgb(235, 235, 235);
+  }
+}
+
+/*******************MEDIA QUERRY******************/
+@media screen and (min-width: 376px) {
+  body {
+    background: url("../images/bg-intro-desktop.png") $red no-repeat top center;
+    background-size: cover;
+    font-size: 16px;
+    height: 100vh;
+    width: 100vw;
+    background-position: top center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    main {
+      width: 75%;
+      max-width: 1200px;
+      margin: 6rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      section {
+        flex: 1;
+        padding: 1rem;
+        min-width: 400px;
+        max-width: 700px;
+      }
+    }
+  }
+
+  /*====================HEADER====================*/
+  .header {
+    text-align: left;
+
+    .header-title {
+      color: white;
+      font-size: calc(26px + 1.5vw);
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    .header-desc {
+      color: rgb(223, 223, 223);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+  }
+
+  /*====================FORM====================*/
+
+  /*====================FORM====================*/
+
+  .pricing {
+    .pricing-promo {
+      background-color: $blue;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      padding: 1.2rem 4rem;
+      margin-bottom: 1.5rem;
+
+      .pricing-highlight {
+        font-weight: 700;
+        color: white;
+      }
+    }
+
+    .form {
+      border-radius: 0.5rem;
+      padding: 2.5rem;
+
+      .inputs {
+        margin-bottom: 2.5rem;
+      }
+
+      .button {
+        background-color: $green;
+        border-color: transparent;
+        border-style: solid solid inset 1px;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.242);
+
+        // box-shadow: 0 5px 5px -2px #9a9a9a;
+        color: white;
+        cursor: pointer;
+        letter-spacing: 1px;
+        outline: none;
+        padding-top: 4px;
+        text-transform: uppercase;
+
+        &:active {
+          box-shadow: 0 5px 5px -3px #9a9a9a;
+          background-color: hsl(154, 56%, 49%);
+          color: rgb(235, 235, 235);
+        }
+      }
+
+      .agreement {
+        color: $grayishBlue;
+        font-size: 0.65rem;
+        font-weight: 500;
+        line-height: 1.8;
+        padding: 0 1rem;
+
+        .terms {
+          color: $red;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  /******************END OF MEDIA QUERRY******************/
+}
+
+/*********************JAVASCRIPT CODE*****************/
+
+.errorborder {
+  border: 2px solid $red;
+}
+
+.hidden {
+  display: none;
+}
+
+.error-message-placeholder::-webkit-input-placeholder {
+  color: $red;
+}

@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/*Primary*/
+/*Accent*/
+/*Neutral*/
+.attribution {
+  font-size: 11px;
+  color: white;
+  text-align: center;
+}
+
+.attribution a {
+  color: #6055a5;
+  text-decoration: none;
+}
+
+body {
+  background: url("../images/bg-intro-mobile.png") #ff7a7a no-repeat top center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+body main {
+  width: 85%;
+  min-width: 250px;
+  margin: 6rem 0;
+}
+
+/*====================HEADER====================*/
+.header {
+  margin-bottom: 4rem;
+}
+
+.header .header-title {
+  color: white;
+  font-size: 1.7rem;
+  line-height: 1.3;
+  margin-bottom: 1.2rem;
+}
+
+.header .header-desc {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/*====================FORM====================*/
+.pricing .pricing-promo {
+  background-color: #6055a5;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 8.5px 1px 0px rgba(0, 0, 0, 0.18);
+          box-shadow: 0px 8.5px 1px 0px rgba(0, 0, 0, 0.18);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  padding: 1.2rem 4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.pricing .pricing-promo .pricing-highlight {
+  font-weight: 700;
+  color: white;
+}
+
+.pricing .form {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.pricing .form .agreement {
+  color: #b9b6d3;
+  font-size: 0.65rem;
+  font-weight: 500;
+  line-height: 1.8;
+  padding: 0 1rem;
+}
+
+.pricing .form .agreement .terms {
+  color: #ff7a7a;
+  font-weight: 600;
+}
+
+.icon-container {
+  position: relative;
+}
+
+.icon-container .icon {
+  position: absolute;
+  right: 1.5rem;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+}
+
+.error-message {
+  display: block;
+  color: #ff7a7a;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 500;
+  position: absolute;
+  right: 0px;
+  bottom: 20px;
+}
+
+.inputs,
+.button {
+  height: 3.5rem;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+  padding: 0 1rem;
+}
+
+.inputs:focus,
+.button:focus {
+  outline: none;
+}
+
+.inputs {
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.inputs:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.inputs:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.inputs:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.inputs:focus::placeholder {
+  color: transparent;
+}
+
+.button {
+  background-color: #38cc8c;
+  border-color: transparent;
+  border-style: solid solid inset 1px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.242);
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1px;
+  outline: none;
+  padding-top: 4px;
+  text-transform: uppercase;
+}
+
+.button:active {
+  -webkit-box-shadow: 0 5px 5px -3px #9a9a9a;
+          box-shadow: 0 5px 5px -3px #9a9a9a;
+  background-color: #37c386;
+  color: #ebebeb;
+}
+
+/*******************MEDIA QUERRY******************/
+@media screen and (min-width: 376px) {
+  body {
+    background: url("../images/bg-intro-desktop.png") #ff7a7a no-repeat top center;
+    background-size: cover;
+    font-size: 16px;
+    height: 100vh;
+    width: 100vw;
+    background-position: top center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  body main {
+    width: 75%;
+    max-width: 1200px;
+    margin: 6rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main section {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 1rem;
+    min-width: 400px;
+    max-width: 700px;
+  }
+  /*====================HEADER====================*/
+  .header {
+    text-align: left;
+  }
+  .header .header-title {
+    color: white;
+    font-size: calc(26px + 1.5vw);
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+  }
+  .header .header-desc {
+    color: #dfdfdf;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  /*====================FORM====================*/
+  /*====================FORM====================*/
+  .pricing .pricing-promo {
+    background-color: #6055a5;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    padding: 1.2rem 4rem;
+    margin-bottom: 1.5rem;
+  }
+  .pricing .pricing-promo .pricing-highlight {
+    font-weight: 700;
+    color: white;
+  }
+  .pricing .form {
+    border-radius: 0.5rem;
+    padding: 2.5rem;
+  }
+  .pricing .form .inputs {
+    margin-bottom: 2.5rem;
+  }
+  .pricing .form .button {
+    background-color: #38cc8c;
+    border-color: transparent;
+    border-style: solid solid inset 1px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.242);
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+    outline: none;
+    padding-top: 4px;
+    text-transform: uppercase;
+  }
+  .pricing .form .button:active {
+    -webkit-box-shadow: 0 5px 5px -3px #9a9a9a;
+            box-shadow: 0 5px 5px -3px #9a9a9a;
+    background-color: #37c386;
+    color: #ebebeb;
+  }
+  .pricing .form .agreement {
+    color: #b9b6d3;
+    font-size: 0.65rem;
+    font-weight: 500;
+    line-height: 1.8;
+    padding: 0 1rem;
+  }
+  .pricing .form .agreement .terms {
+    color: #ff7a7a;
+    font-weight: 600;
+  }
+  /******************END OF MEDIA QUERRY******************/
+}
+
+/*********************JAVASCRIPT CODE*****************/
+.errorborder {
+  border: 2px solid #ff7a7a;
+}
+
+.hidden {
+  display: none;
+}
+
+.error-message-placeholder::-webkit-input-placeholder {
+  color: #ff7a7a;
+}
+/*# sourceMappingURL=styles.css.map */

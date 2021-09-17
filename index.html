@@ -1,42 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro component with sign up form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
 
-  Learn to code by watching others
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <h1 class="header-title">Learn to code by watching others</h1>
+        <p class="header-desc">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+      <section class="pricing">
+        <div class="pricing-promo">
+          <span class="pricing-highlight">Try it free 7 days</span> then $20/mo.
+          thereafter
+        </div>
+        <form class="form" name="Form"  action=''>
+          <div class="icon-container">
+            <img class="icon " src="images/icon-error.svg" alt="" />
+            <input   
+              name='firstname' 
+              id="fname"
+              class="inputs "
+              type="text"
+              placeholder="First Name"
+            />
+            <span class="error-message">First Name cannot be empty</span>
+          </div>
+          <div class="icon-container">
+            <img class="icon " src="images/icon-error.svg" alt="" />
+            <input
+              name='lastname' 
+              id="lname"
+              class="inputs"
+              type="text"
+              placeholder="Last Name"
+            /> <span class="error-message">Last Name cannot be empty</span>
+          </div>
+          <div class="icon-container">
+            <img class="icon" src="images/icon-error.svg" alt="" />
+            <input
+              id="email"
+              class="inputs"
+              type="email"
+              placeholder="Email Address"
+            /> <span class="error-message error-message-placeholder">Looks like this is not an email</span>
+          </div>
+          <div class="icon-container">
+            <img class="icon " src="images/icon-error.svg" alt="" />
+            <input
+              id="password"
+              class="inputs"
+              type="password"
+              placeholder="Password"
+            /> <span class="error-message">Password cannot be empty</span>
+          </div>
+          <input class='button' type="button" value='CLAIM YOUR FREE TRIAL'></input>
+          <div class="agreement">
+            By clicking the button, you are agreeing to our
+            <span class="terms">Terms and Services</span>
+          </div>
+        </form>
+      </section>
+    </main>
 
-  Try it free 7 days then $20/mo. thereafter
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/Briancarlo24">Brian Carlo Birondo</a>.
+      </p>
+    </footer>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
