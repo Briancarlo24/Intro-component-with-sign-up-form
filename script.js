@@ -22,6 +22,9 @@ function init() {
   inputValue.forEach((item) => {
     item.classList.remove("errorborder");
   });
+
+  document.getElementById("email").setAttribute("placeholder", "Email");
+  document.getElementById("email").style.color = "rgba(0, 0, 0, 0.75)";
 }
 
 // IF ANY INPUT IS CLICKED, THE ICON WILL DISAPPEAR

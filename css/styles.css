@@ -31,7 +31,7 @@ body {
   background: url("../images/bg-intro-mobile.png") #ff7a7a no-repeat top center;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,7 +129,7 @@ body main {
   font-weight: 500;
   position: absolute;
   right: 2px;
-  bottom: 8px;
+  bottom: 0px;
 }
 
 .inputs,
@@ -141,11 +141,6 @@ body main {
   margin-bottom: 1rem;
   font-family: "Poppins", sans-serif;
   padding: 0 1rem;
-}
-
-.inputs:focus,
-.button:focus {
-  outline: none;
 }
 
 .inputs {
@@ -189,13 +184,30 @@ body main {
   color: #ebebeb;
 }
 
+@media screen and (min-width: 376px) and (max-width: 1066px) {
+  body main {
+    max-width: 700px;
+  }
+  .header {
+    margin-bottom: 0px;
+  }
+  .header .header-title {
+    text-align: center;
+    font-size: calc(26px + 1.5vw);
+  }
+  .header .header-desc {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+}
+
 /*******************MEDIA QUERRY******************/
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 1067px) {
   body {
     background: url("../images/bg-intro-desktop.png") #ff7a7a no-repeat top center;
     background-size: cover;
     font-size: 16px;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-position: top center;
     display: -webkit-box;
@@ -215,7 +227,7 @@ body main {
   }
   body main {
     width: 75%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 6rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -301,6 +313,16 @@ body main {
   .pricing .form .agreement .terms {
     color: #ff7a7a;
     font-weight: 600;
+  }
+  .error-message {
+    display: block;
+    color: #ff7a7a;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    position: absolute;
+    right: 2px;
+    bottom: 8px;
   }
   /******************END OF MEDIA QUERRY******************/
 }
