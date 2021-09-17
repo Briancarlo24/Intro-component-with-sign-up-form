@@ -184,7 +184,7 @@ body main {
   color: #ebebeb;
 }
 
-@media screen and (min-width: 376px) and (max-width: 1066px) {
+@media screen and (min-width: 376px) and (max-width: 1199px) {
   body main {
     max-width: 700px;
   }
@@ -202,7 +202,7 @@ body main {
 }
 
 /*******************MEDIA QUERRY******************/
-@media screen and (min-width: 1067px) {
+@media screen and (min-width: 1200px) {
   body {
     background: url("../images/bg-intro-desktop.png") #ff7a7a no-repeat top center;
     background-size: cover;
@@ -226,8 +226,8 @@ body main {
     text-align: center;
   }
   body main {
-    width: 75%;
-    max-width: 1400px;
+    width: 95%;
+    max-width: 1200px;
     margin: 6rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -247,7 +247,6 @@ body main {
             flex: 1;
     padding: 1rem;
     min-width: 400px;
-    max-width: 700px;
   }
   /*====================HEADER====================*/
   .header {

@@ -176,7 +176,7 @@ body {
   }
 }
 
-@media screen and (min-width: 376px) and (max-width: 1066px) {
+@media screen and (min-width: 376px) and (max-width: 1199px) {
   body {
     main {
       max-width: 700px;
@@ -197,7 +197,7 @@ body {
 }
 
 /*******************MEDIA QUERRY******************/
-@media screen and (min-width: 1067px) {
+@media screen and (min-width: 1200px) {
   body {
     background: url("../images/bg-intro-desktop.png") $red no-repeat top center;
     background-size: cover;
@@ -213,8 +213,8 @@ body {
     text-align: center;
 
     main {
-      width: 75%;
-      max-width: 1400px;
+      width: 95%;
+      max-width: 1200px;
       margin: 6rem 0;
       display: flex;
       flex-wrap: wrap;
@@ -225,7 +225,6 @@ body {
         flex: 1;
         padding: 1rem;
         min-width: 400px;
-        max-width: 700px;
       }
     }
   }
