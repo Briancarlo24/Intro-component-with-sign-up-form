@@ -128,8 +128,8 @@ body main {
   font-style: italic;
   font-weight: 500;
   position: absolute;
-  right: 0px;
-  bottom: 20px;
+  right: 2px;
+  bottom: 8px;
 }
 
 .inputs,
@@ -271,7 +271,7 @@ body main {
     padding: 2.5rem;
   }
   .pricing .form .inputs {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   .pricing .form .button {
     background-color: #38cc8c;
