@@ -1,6 +1,6 @@
 # Frontend Mentor - Intro component with sign up form solution
 
-This is a solution to the [Intro component with sign up form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Intro component with sign up form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -27,34 +27,22 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Receive an error message when the `form` is submitted if:
-  - Any `input` field is empty. The message for this error should say *"[Field Name] cannot be empty"*
-  - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Looks like this is not an email"*
-
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+  - Any `input` field is empty. The message for this error should say _"[Field Name] cannot be empty"_
+  - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say _"Looks like this is not an email"_
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Briancarlo24/Intro-component-with-sign-up-form.git)
+- Live Site URL: [Add live site URL here](https://https://briancarlo24.github.io/Intro-component-with-sign-up-form/-live-site-url.com)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS custom properties
 - Flexbox
-- CSS Grid
+- Javascript
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
@@ -68,47 +56,74 @@ Use this section to recap over some of your major learnings while working throug
 
 To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+
+// WHEN BUTTON IS CLICKED THIS HAPPENS
+button.addEventListener("click", function () {
+  inputArr.push(document.forms["Form"].firstname.value);
+  inputArr.push(document.forms["Form"].lastname.value);
+  inputArr.push(document.forms["Form"].email.value);
+  inputArr.push(document.forms["Form"].password.value);
+  console.log(inputArr);
+
+  if (
+    inputArr[0] !== "" &&
+    inputArr[1] !== "" &&
+    inputArr[2] !== "" &&
+    inputArr[3] !== ""
+  ) {
+    alert(
+      `First Name: ${inputArr[0]} \nLast Name: ${inputArr[1]} \nEmail: ${inputArr[2]} \nPassword: ${inputArr[3]}`
+    );
+
+    inputValue.forEach((items) => {
+      items.value = "";
+    });
+    window.location.reload();
+  } else {
+    for (let i = 0; i < inputArr.length; i++) {
+      if (inputArr[i] === "") {
+        if (i !== 2) {
+          errorIcon[i].classList.remove("hidden");
+          errorMEssage[i].classList.remove("hidden");
+          inputValue[i].classList.add("errorborder");
+        } else {
+          errorIcon[i].classList.remove("hidden");
+          errorMEssage[i].classList.remove("hidden");
+          inputValue[i].classList.add("errorborder");
+          document
+            .getElementById("email")
+            .setAttribute("placeholder", "email@example.com");
+          document.getElementById("email").style.color = "hsl(0, 100%, 74%)";
+        }
+      }
+    }
+  }
+  inputArr.length = 0;
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I would like to learn how to properly use pseudo elements like before and after for popup error message in the input field. I think it will be very helpful and would make my coding more efficient and readable.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+I use a lot of resources which I am not able to track. But the main once are:
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+Google.com
+w3cschools.com
+stackoverflow.com
+MDN web docs are very helpful for javascript as well
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Brian Carlo Birondo](https://briancarlo24.github.io/Intro-component-with-sign-up-form/)
+- Frontend Mentor - [@Briancarlo24](https://www.frontendmentor.io/profile/Briancarlo24)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Thank you for google and for the ones I have listed in the useful resources section.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Also thank you for @grace-snow for giving me feedback for this challenge. It opened a lot of things for me to learn and to improve my web development skills.
+
+This is my second to last challenge with the newbie(free version) and would continue doing challenge on the junior level. Hopefully I'm able to learn more along the way.
