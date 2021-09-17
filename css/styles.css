@@ -314,7 +314,7 @@ body main {
   display: none;
 }
 
-.error-message-placeholder::-webkit-input-placeholder {
+#email::-webkit-input-placeholder {
   color: #ff7a7a;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -306,6 +306,6 @@ body {
   display: none;
 }
 
-.error-message-placeholder::-webkit-input-placeholder {
+#email::-webkit-input-placeholder {
   color: $red;
 }
